@@ -21,14 +21,15 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
-    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+    // https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
     implementation 'org.apache.httpcomponents:httpclient:4.5'
     implementation 'com.google.code.gson:gson:2.8.0'
 }
 
 jar {
     manifest {
-        attributes "Main-Class": "ml.indiumcoin.waterdev.fileshare.FileShare"
+        attributes "Main-Class": "io.github.waterdev.fileshare.FileShare"
     }
 
     from {
